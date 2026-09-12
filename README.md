@@ -54,7 +54,8 @@ All tests used the same 500 fake patients (same seed number), so the results can
 | Experimental Policy 1 (drop L3) | 40.62 | 401 | 0 | 36 | 63 |
 
 **Best score so far: Policy 1 / Policy 2, tied at 44.67.** Every change we tried away from the base rule made the score go down.
-**Final Policy used is Policy 1 with revision given in 'policy.py' file.** Every change we tried away from the base rule made the score go down.
+
+**Final Policy used is Policy 1 with revision given in ```policy.py``` file.** Every change we tried away from the base rule made the score go down.
 
 ## Key Things We Learned
 
