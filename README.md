@@ -1,4 +1,8 @@
-# Hospital Bed Allocation — Simple Report
+# Hospital Bed Allocation
+
+## Analysis of PS
+
+The PS asks us to run a simulation, generating 500 patient entries, the random generation is to be done using NumPy PCG64 with seed: 20260911, the patient can be of 3 acuity, 1st is general having a probability of 0.6, then is monitored with prob 0.3 and lastly critical with prob 0.1 . It is defined what kinds of beds can be alloted to what kind of patients, and how many beds are there. We are asked to make a policy such that patients are alloted beds within least amount of time and to admit as many patients as possible. Factors such as LOS per patient is also random.
 
 ## What We Were Trying To Do
 We tested different rules ("policies") for deciding which hospital bed a patient gets, based on how sick they are (Level 1 = least serious, Level 3 = most serious). The goal was to reduce how many patients get rejected (turned away) and how long they wait, while still treating the sickest patients properly.
