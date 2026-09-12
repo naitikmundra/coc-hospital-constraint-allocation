@@ -29,6 +29,8 @@ All tests used the same 500 fake patients (same seed number), so the results can
 **Result:** Exactly the same numbers as Policy 1 (0 / 68 / 32 rejected). This tells us that in this test, the "flexibility" in Policy 1 (letting patients wait 2 hours then use a higher bed) almost never actually got used — probably because when a patient was stuck waiting, ALL bed types were full anyway, not just their own type.
 **Score:** 44.67 out of 95 (tied with Policy 1)
 
+**Revision:** Since acuity 1 patients are not being rejected, and allocating them beds after 2 hours seems bad idea for other seeds, we limited to general only for acuity 1 regardless of wait time.
+
 ### Policy 3 — "Hold 2 critical beds in reserve for Level 2"
 - Same as Policy 1, but 2 critical beds are kept empty, saved only for Level 2 patients.
 
@@ -52,6 +54,7 @@ All tests used the same 500 fake patients (same seed number), so the results can
 | Experimental Policy 1 (drop L3) | 40.62 | 401 | 0 | 36 | 63 |
 
 **Best score so far: Policy 1 / Policy 2, tied at 44.67.** Every change we tried away from the base rule made the score go down.
+**Final Policy used is Policy 1 with revision given in 'policy.py' file.** Every change we tried away from the base rule made the score go down.
 
 ## Key Things We Learned
 
