@@ -9,16 +9,27 @@ We tested different rules ("policies") for deciding which hospital bed a patient
 
 All tests used the same 500 fake patients (same seed number), so the results can be fairly compared.
 
-## The Policies We Tried
+## The Policy
 
-### Policy 1 — "Use the simplest bed that works"
+### "Use the simplest bed that works"
 - Level 3 patients: critical beds only.
 - Level 2 patients: monitored beds normally; can use a critical bed only if they've waited 2+ hours and no monitored bed is free.
 - Level 1 patients: general beds normally; can use monitored or critical beds only if they've waited 2+ hours and nothing lower is free.
 - Sicker patients get priority; same-level patients are served in the order they arrived.
 
+Policy
 **Result:** 0 Level 1 rejected, 68 Level 2 rejected, 32 Level 3 rejected. 400 out of 500 admitted.
 **Score:** 44.67 out of 95
+
+**Final Policy used is this one with code given in ```policy.py``` file.**
+
+
+## The Simulation GUI
+
+The simulation can be viewed at [https://coc-hospital-beds.netlify.app/]
+
+
+## Other tested policies
 
 ### Experimental Policy 1 — "Give up on Level 3 to help Level 2"
 - Level 3 patients are never admitted at all (always rejected).
@@ -59,7 +70,6 @@ All tests used the same 500 fake patients (same seed number), so the results can
 
 **Best score so far: Policy 1 / Policy 2, tied at 44.67.** Every change we tried away from the base rule made the score go down.
 
-**Final Policy used is Policy 1 with revision given in ```policy.py``` file.**
 
 ## Key Things We Learned
 
