@@ -16,7 +16,7 @@ The simulator is the only component allowed to see "future" information
 (it owns the RNG and the event queue); the policy object only ever
 receives `free_beds` (current state) and the `patient` under
 consideration (whose only known attributes at decision time are its own
-id, arrival_time and acuity -- exactly what "arrival" reveals).
+id, arrival_time and acuity, exactly what "arrival" reveals).
 """
 
 import heapq

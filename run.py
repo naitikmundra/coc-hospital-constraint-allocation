@@ -12,9 +12,7 @@ simulator on the development stream (NumPy PCG64, seed=20260911,
 Usage:
     python run_dev.py [seed]
 
-If a seed is given on the command line it overrides config.SEED, so the
-same script can be pointed at unseen evaluation seeds without any code
-changes (the policy code itself never changes across seeds).
+If a seed is given on the command line it overrides config.SEED.
 """
 
 import csv
